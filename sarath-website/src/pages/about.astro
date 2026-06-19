@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Button from '../components/Button.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="About"
+  description={`Learn more about ${site.name} — who he is, where he's been, and what shapes how he thinks.`}
+>
+  <section class="py-12 md:py-16">
+    <Container>
+      <div class="mx-auto max-w-4xl">
+        <p class="section-label mb-4">About</p>
+
+        <h1 class="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+          Hi, I’m Sarath.
+        </h1>
+
+        <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+          I’ve spent most of my life trying to understand how things work - people,
+          systems, incentives, products, businesses.
+        </p>
+
+        <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+          A lot of my work has sat at the messy intersection of these things, where
+          technology alone isn’t enough and the real challenge is aligning behaviour,
+          process and trust.
+        </p>
+
+        <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+          Over time, I’ve realised I’m less interested in building for the sake of building,
+          and more interested in understanding why something breaks, where the bottleneck is,
+          and what changes when you fix it.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Professional -->
+  <section class="border-y border-border/50 py-16 md:py-20">
+    <Container>
+      <div class="mx-auto max-w-4xl">
+        <h2 class="text-2xl font-semibold tracking-tight text-foreground">
+          Where I’ve worked
+        </h2>
+
+        <div class="mt-8 space-y-6">
+          {
+            [
+              {
+                company: 'Citi',
+                role: 'Analyst',
+                period: '2015 — 2017',
+                description:
+                  'My first real exposure to systems at scale. I worked on internal dashboards and reporting tools, and learned how agile teams function.',
+              },
+              {
+                company: 'Olam Food Ingredients',
+                role: 'Program Manager',
+                period: '2019 — 2022',
+                description:
+                  'This is where I learned that digital transformation is rarely about technology alone. It is mostly about people, incentives and whether the system fits the reality of the ground.',
+              },
+              {
+                company: 'Katha Ads',
+                role: 'Strategy Lead',
+                period: '2022 — Present',
+                description:
+                  'A completely different world — bootstrapped, fast-moving and chaotic. Here I’ve worked on creator growth, marketplace systems and the invisible operational layers that make scale possible.',
+              },
+            ].map((job) => (
+              <div class="card card-hover p-6">
+                <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+                  <div>
+                    <h3 class="font-semibold text-foreground">{job.company}</h3>
+                    <p class="text-sm text-muted-foreground">{job.role}</p>
+                  </div>
+
+                  <span class="text-sm text-muted">{job.period}</span>
+                </div>
+
+                <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {job.description}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Academic -->
+  <section class="py-16 md:py-20">
+    <Container>
+      <div class="mx-auto max-w-4xl">
+        <h2 class="text-2xl font-semibold tracking-tight text-foreground">
+          Where I studied
+        </h2>
+
+        <div class="mt-8 space-y-6">
+          <div class="card p-6">
+            <h3 class="font-semibold text-foreground">IIT Madras</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              B.Tech, Electrical Engineering
+            </p>
+            <p class="mt-2 text-sm text-muted">
+              2011 — 2015
+            </p>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+              If given a chance, I would do this again. And again. And again. Not to learn signal processing or analog circuits, but to meet my people again for the first time. None of us knew how much we would shape each other.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-semibold text-foreground">IIM Lucknow</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              MBA, Marketing
+            </p>
+            <p class="mt-2 text-sm text-muted">
+              2017 — 2019
+            </p>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Everything I learnt, was inside the placement office. Stretching myself till I broke, staying up all night figuring out how to bring that one aspirational recruiter - only to get roasted on Grapevine.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Personal -->
+  <section class="border-t border-border/50 py-16 md:py-20">
+    <Container>
+      <div class="mx-auto max-w-4xl">
+        <h2 class="text-2xl font-semibold tracking-tight text-foreground">
+          A few things about me
+        </h2>
+
+        <ul class="mt-8 space-y-3">
+          {
+            [
+              'I wanted this page to be more artsy, but I decided to deploy it and then did not find time to make it artsy.', 
+              'I watch Liverpool play a lot. A LOT. I promise to watch more of the Premier League and UCL next season.',
+              'I can talk for hours about Malayalam cinema. Nothing turns me off faster than a film that feels lazy or loose.',
+              'Inside my head, the day I start content creation is the day it\'s over for the rest of the Internet.',
+              'I think your recently repeated list on Spotify tells a lot about how you\'re doing in life.',
+              'I was 30 years old when I figured out execution >>>>> ideation.',
+              'I have a lot of answers ready inside my head for questions nobody has asked me.'
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-muted-foreground">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+
+        <div class="mt-12 flex gap-4">
+          <Button href="/contact" variant="primary">Say hello</Button>
+          <Button href="/work" variant="secondary">See my work</Button>
+        </div>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

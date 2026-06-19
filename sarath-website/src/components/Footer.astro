@@ -1,0 +1,76 @@
+---
+import { site, navigation, socialLinks } from '../data/site';
+---
+
+<footer class="mt-auto border-t border-border/50">
+  <div class="mx-auto max-w-6xl px-6 py-12 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-3">
+      <div>
+        <div class="flex items-center gap-2">
+          <span
+            class="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-accent to-accent-secondary text-xs font-bold text-white"
+          >
+            SK
+          </span>
+          <span class="text-sm font-semibold text-foreground">{site.name}</span>
+        </div>
+        <p class="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
+          Finding bottlenecks, understanding why they exist, and building systems to remove them.
+        </p>
+      </div>
+
+      <div>
+        <p class="section-label mb-4">Navigation</p>
+        <ul class="space-y-2">
+          {
+            navigation.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <p class="section-label mb-4">Connect</p>
+        <ul class="space-y-2">
+          {
+            socialLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+          <li>
+            <a
+              href={`mailto:${site.email}`}
+              class="text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
+            >
+              {site.email}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 sm:flex-row">
+      <p class="text-xs text-muted">
+        &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
+      </p>
+      <p class="text-xs text-muted">Crafted with Astro & Tailwind</p>
+    </div>
+  </div>
+</footer>

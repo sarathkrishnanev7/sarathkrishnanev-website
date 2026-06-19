@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #050505;
+  --color-surface: #0a0a0a;
+  --color-surface-elevated: #111111;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.16);
+  --color-muted: #888888;
+  --color-muted-foreground: #a1a1a1;
+  --color-foreground: #ededed;
+  --color-accent: #0070f3;
+  --color-accent-secondary: #7928ca;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.15), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 0%, rgba(0, 112, 243, 0.08), transparent);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgba(0, 112, 243, 0.3);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #fff 20%, rgba(255, 255, 255, 0.6));
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #0070f3, #7928ca);
+  }
+
+  .card {
+    @apply rounded-xl border border-border bg-surface-elevated/50 backdrop-blur-sm transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:border-border-hover hover:bg-surface-elevated hover:shadow-[0_0_0_1px_rgba(255,255,255,0.05),0_8px_40px_rgba(0,0,0,0.4)] hover:-translate-y-0.5;
+  }
+
+  .section-label {
+    @apply text-xs font-medium uppercase tracking-widest text-muted;
+  }
+
+  .prose-custom {
+    @apply text-muted-foreground leading-relaxed;
+
+    & h2 {
+      @apply mt-10 mb-4 text-2xl font-semibold tracking-tight text-foreground;
+    }
+
+    & h3 {
+      @apply mt-8 mb-3 text-xl font-semibold text-foreground;
+    }
+
+    & p {
+      @apply mb-4;
+    }
+
+    & a {
+      @apply text-accent underline-offset-4 hover:underline;
+    }
+
+    & ul,
+    & ol {
+      @apply mb-4 ml-6;
+    }
+
+    & ul {
+      @apply list-disc;
+    }
+
+    & ol {
+      @apply list-decimal;
+    }
+
+    & li {
+      @apply mb-2;
+    }
+
+    & code {
+      @apply rounded bg-surface-elevated px-1.5 py-0.5 text-sm text-foreground;
+    }
+
+    & pre {
+      @apply my-6 overflow-x-auto rounded-xl border border-border bg-surface p-4;
+    }
+
+    & blockquote {
+      @apply my-6 border-l-2 border-accent pl-4 text-foreground italic;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+---
+import Container from '../Container.astro';
+import Button from '../Button.astro';
+import ArticleCard from '../ArticleCard.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { posts } = Astro.props;
+---
+
+<section class="border-y border-border/50 bg-surface/30 py-16 md:py-20">
+  <Container>
+    <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+      <div>
+        <p class="section-label mb-4">Latest Articles</p>
+        <h2 class="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          Thoughts & insights
+        </h2>
+      </div>
+      <Button href="/blog" variant="ghost">View all posts →</Button>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map((post) => <ArticleCard post={post} />)}
+    </div>
+  </Container>
+</section>

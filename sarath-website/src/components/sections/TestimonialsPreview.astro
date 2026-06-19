@@ -1,0 +1,39 @@
+---
+import Container from '../Container.astro';
+import Button from '../Button.astro';
+import TestimonialCard from '../TestimonialCard.astro';
+import type { Testimonial } from '../../data/testimonials';
+
+interface Props {
+  testimonials: Testimonial[];
+}
+
+const { testimonials } = Astro.props;
+---
+
+<section class="py-16 md:py-20">
+  <Container>
+    <div class="text-center">
+  <p class="section-label mb-4">Testimonials</p>
+
+  <h2 class="text-3xl font-bold tracking-tight text-foreground md:text-5xl">
+    What people say about me!
+  </h2>
+
+  <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+    I've been fortunate to work with incredible colleagues, mentors and founders.
+    Here are a few of their thoughts.
+  </p>
+</div>
+
+    <div class="mt-12 flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory">
+
+  {testimonials.map((testimonial) => (
+    <div class="min-w-[420px] max-w-[420px] snap-start">
+      <TestimonialCard testimonial={testimonial} />
+    </div>
+  ))}
+
+</div>
+  </Container>
+</section>

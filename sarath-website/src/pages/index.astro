@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import ProductsPreview from '../components/sections/ProductsPreview.astro';
+import AboutPreview from '../components/sections/AboutPreview.astro';
+import LatestArticles from '../components/sections/LatestArticles.astro';
+import TestimonialsPreview from '../components/sections/TestimonialsPreview.astro';
+import MentorshipCTA from '../components/sections/MentorshipCTA.astro';
+import ContactCTA from '../components/sections/ContactCTA.astro';
+import { getCollection } from 'astro:content';
+import { testimonials } from '../data/testimonials';
+
+const posts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout>
+  <Hero />
+
+<TestimonialsPreview testimonials={testimonials} />
+
+  <ProductsPreview />
+
+  <AboutPreview />
+
+  <LatestArticles posts={posts} />
+
+  <ContactCTA />
+</BaseLayout>

@@ -1,0 +1,75 @@
+---
+import type { Testimonial } from '../data/testimonials';
+
+interface Props {
+  testimonial: Testimonial;
+}
+
+const { testimonial } = Astro.props;
+---
+
+<a
+  href={testimonial.linkedin}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="card card-hover block h-full p-8 transition-all"
+>
+  <!-- Quote -->
+
+  <p class="text-base leading-relaxed text-foreground">
+    "{testimonial.quote}"
+  </p>
+
+  <!-- Person -->
+
+  <div class="mt-8 flex items-center gap-4 border-t border-border/50 pt-6">
+
+    <img
+      src={testimonial.photo}
+      alt={testimonial.author}
+      class="h-14 w-14 rounded-full object-cover border border-border"
+    />
+
+    <div>
+      <cite class="not-italic text-base font-semibold text-primary hover:underline">
+  {testimonial.author} ↗
+      </cite>
+
+      <p class="text-sm text-muted-foreground">
+        {testimonial.role}
+      </p>
+
+      <p class="text-sm text-muted-foreground">
+        {testimonial.company}
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Relationship -->
+
+  <div class="mt-5 space-y-2 text-sm">
+
+    <p class="text-muted-foreground">
+      <span class="font-medium text-foreground">
+        How we know each other:
+      </span>
+      {' '}
+      {testimonial.relationship}
+    </p>
+
+    <p class="text-muted-foreground">
+      <span class="font-medium text-foreground">
+        Known me since:
+      </span>
+      {' '}
+      {testimonial.knownSince}
+    </p>
+
+  </div>
+
+  <!-- LinkedIn -->
+
+
+
+</a>

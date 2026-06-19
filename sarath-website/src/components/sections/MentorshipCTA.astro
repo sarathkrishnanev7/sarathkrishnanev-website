@@ -1,0 +1,33 @@
+---
+import Container from '../Container.astro';
+import Button from '../Button.astro';
+---
+
+<section class="py-16 md:py-20">
+  <Container>
+    <div
+      class="card relative overflow-hidden p-8 md:p-12 lg:p-16"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(121,40,202,0.12),transparent_60%)]"
+      >
+      </div>
+      <div class="relative mx-auto max-w-2xl text-center">
+        <p class="section-label mb-4">Mentorship</p>
+        <h2 class="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          Level up your engineering career
+        </h2>
+        <p class="mt-4 text-base leading-relaxed text-muted-foreground">
+          Whether you're navigating your first senior role or preparing for staff
+          engineer interviews, I offer structured 1:1 mentorship to help you reach
+          your goals faster.
+        </p>
+        <div class="mt-8">
+          <Button href="/mentorship" variant="primary" size="lg">
+            Explore mentorship
+          </Button>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
