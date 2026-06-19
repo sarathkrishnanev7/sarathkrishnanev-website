@@ -3,7 +3,7 @@ export const site = {
   title: 'Sarath Krishnan — Systems, Product & Operations',
   description:
     'Personal website of Sarath Krishnan. Writing about systems, product, incentives and the messy realities of scale.',
-  url: 'https://sarathkrishnan.dev',
+  url: 'https://sarathkrishnanev-website.vercel.app',
   email: 'sarathkrishnanev7@gmail.com',
   location: 'India',
 } as const;
