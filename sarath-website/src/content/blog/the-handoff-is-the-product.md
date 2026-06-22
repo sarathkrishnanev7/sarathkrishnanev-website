@@ -1,8 +1,8 @@
 ---
-title: "The Art of Technical Decision-Making"
-description: "How to evaluate trade-offs, align stakeholders, and make engineering decisions that stand the test of time."
-pubDate: 2025-03-12
-tags: ["engineering", "leadership", "architecture"]
+title: "The handoff is the product"
+description: "As AI moves into the core of products, designing handoffs between human judgment and machine output becomes a central problem."
+pubDate: 2025-06-01
+tags: ["AI", "Product", "Strategy"]
 ---
 
 Most tech products we have interacted with so far have been deterministic in nature.
