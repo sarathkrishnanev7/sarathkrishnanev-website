@@ -16,8 +16,6 @@ export const navigation = [
   { label: 'Contact', href: '/contact' },
 ] as const;
 
- 
-
 export const socialLinks = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/sarath-krishnan-ba5b8168/' },
 ] as const;
