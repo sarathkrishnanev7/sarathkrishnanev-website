@@ -1,5 +1,4 @@
 ---
-
 title: "A product metric should explain a decision"
 description: "If a metric does not help you decide what to build, fix, or investigate, it is probably noise."
 pubDate: 2026-06-04

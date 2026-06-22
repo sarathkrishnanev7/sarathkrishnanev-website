@@ -1,5 +1,4 @@
 ---
-
 title: "Every workflow has an unofficial version"
 description: "The documented workflow is rarely the real workflow. Pay attention to what happens outside the system."
 pubDate: 2026-06-07
