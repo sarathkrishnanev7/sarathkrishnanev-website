@@ -2,7 +2,7 @@
 
 title: "Track the metric. Remember the goal."
 description: "Metrics are only proxies. Necessary, but not sufficient."
-pubDate: 2026-06-08
+pubDate: 2026-06-18
 tags: ["metrics", "incentives", "decision-making"]
 ------------------------------------------------------------------------
 

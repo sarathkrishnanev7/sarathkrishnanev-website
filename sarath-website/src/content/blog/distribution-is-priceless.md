@@ -1,7 +1,7 @@
 ---
 title: "Distribution matters more now that building is easiy"
 description: "As AI lowers the cost of building, the harder problem shifts to attention, trust and distribution."
-pubDate: 2026-06-05
+pubDate: 2026-06-23
 tags: ["product", "distribution", "ai", "attention", "go-to-market"]
 --------------------------------------------------------------------
 

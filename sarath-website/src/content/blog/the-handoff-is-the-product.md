@@ -1,7 +1,7 @@
 ---
 title: "The handoff is the product"
 description: "As AI moves into the core of products, designing handoffs between human judgment and machine output becomes a central problem."
-pubDate: 2026-06-02
+pubDate: 2026-06-20
 tags: ["AI", "Product", "Strategy"]
 ---
 
