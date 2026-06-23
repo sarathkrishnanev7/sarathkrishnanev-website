@@ -19,11 +19,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       Creator Acquisition • Marketplace Design • Growth Systems • Product Strategy
     </p>
     <div class="mt-12 overflow-hidden rounded-2xl border border-border">
-  <img
-    src="/images/work-katha-heroimage.png"
-    alt="Katha Ads Platform"
-    class="w-full aspect-[16/9] object-contain object-center"
-  />
+  <picture>
+    <source
+      srcset="/images/katha-mobile.png"
+      media="(max-width: 768px)"
+    />
+    <img
+      src="/images/katha-desktop.png"
+      alt="Katha Ads Platform"
+      class="w-full aspect-[16/9] object-contain object-center"
+    />
+  </picture>
 </div>
     <div class="mt-12 grid gap-8 md:grid-cols-3">
 

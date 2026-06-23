@@ -19,11 +19,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     Digital Transformation • Enterprise Systems • Product Adoption • Change Management
     </p>
     <div class="mt-12 overflow-hidden rounded-2xl border border-border">
-  <img
-    src="/images/work-olam-heroimage.png"
-    alt="Katha Ads Platform"
-    class="h-[420px] w-full object-contain object-top"
-  />
+  <picture>
+    <source
+      srcset="/images/olam-mobile.png"
+      media="(max-width: 768px)"
+    />
+    <img
+      src="/images/olam-desktop.png"
+      alt="Olam Food Ingredients"
+      class="w-full aspect-[16/9] object-contain object-center"
+    />
+  </picture>
 </div>
     <div class="mt-12 grid gap-8 md:grid-cols-3">
 
