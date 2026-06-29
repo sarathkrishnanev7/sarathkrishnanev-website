@@ -2,7 +2,7 @@
 
 title: "Users you want the most need you the least"
 description: "The best users in any two sided marketplace will already have a system that works for them."
-pubDate: 2026-06-18
+pubDate: 2026-06-29
 tags: ["marketplace", "incentives", "optionality"]
 ------------------------------------------------------------------------
 
